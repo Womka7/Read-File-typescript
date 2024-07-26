@@ -1,4 +1,4 @@
-class CSVView {
+class createTable {
     private table: HTMLElement;
 
     constructor(tableId: string) {
@@ -8,13 +8,23 @@ class CSVView {
         }
         this.table = tableElement;
     }
-
     renderTable(data: string[][]) {
         this.clearTable();
         if (data.length === 0) return;
-
-        const [headers, ...rows] = data;
-
+    
+        let headers: string[] = [];
+        let rows: string[][] = [];
+    
+        // Usar forEach para dividir los encabezados y las filas
+        data.forEach((row, index) => {
+            if (index === 0) {
+                headers = row; // La primera fila son los encabezados
+            } else {
+                rows.push(row); // El resto son las filas de datos
+            }
+        });
+    
+        // Crear la fila de encabezado
         const headerRow = document.createElement('tr');
         headers.forEach(header => {
             const thElement = document.createElement('th');
@@ -22,7 +32,8 @@ class CSVView {
             headerRow.appendChild(thElement);
         });
         this.table.appendChild(headerRow);
-
+    
+        // Crear las filas de datos
         rows.forEach(row => {
             const rowElement = document.createElement('tr');
             row.forEach(element => {
@@ -33,11 +44,10 @@ class CSVView {
             this.table.appendChild(rowElement);
         });
     }
-
+    
+    
     private clearTable() {
-        while (this.table.lastElementChild !== null) {
-            this.table.removeChild(this.table.lastElementChild);
-        }
+        this.table.innerHTML = ""
     }
 }
-export { CSVView };
+export { createTable };
