@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/views/scss/styles.scss">
   <title>Read File Riwi</title>
 </head>
+
 <body>
-  
+  <main>
+    <section>
+      <h1>
+        Lector de archivos .csv Riwi
+      </h1>
+      <article>
+        <div id="myContenIinput">
+          <input accept=".csv" type="file" id="file">
+        </div>
+        <div id="search-container"></div>
+      </article>
+      <div id="myTable" class="table-container">
+        <table id="table" class="table table-striped table-bordered"></table>
+      </div>
+      <div id="pagination-controls"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/index.ts"></script>
 </body>
+
 </html>
