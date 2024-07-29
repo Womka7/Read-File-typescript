@@ -1,4 +1,4 @@
-# Consumption API Books with - auth
+# Read File.csv and list table with search
  _Software con typescript que permite leer archivos .csv y mostrarlos en una tabla al igual que buscar dentro de esta RIWI_
 
 ### Technologies Used
@@ -41,5 +41,5 @@ MIT
 
 
 
-# CrudBooks-TypeScript
+# File Reader-TypeScript
 In this repository there is a page where you can view your files.csv and search data in this
