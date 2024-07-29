@@ -1,39 +1,97 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
+body {
+    background: #eaff01;
+    background: -webkit-linear-gradient(to bottom,  #eaff0171,#0062ff5f,#ff26005b);
+    background: linear-gradient(to bottom,#eaff0166, #0062ff5c, #ff260056 );
+    height: 100vh - 3.6vh; // Asegura que main ocupe toda la altura de la ventana
+    // border: 6px solid rgb(255, 0, 242);
+}
 
+main {
+    width: 100%;
+    // border: 6px solid gold;
+    max-height: 100vh - 3.6vh;
+}
+
+section {
+    margin: 20px;
+    max-height: 100vh - 10vh;
+    // border: 6px solid red;
+    overflow-y: auto; // Habilita el scroll vertical
+}
+h1{
+    text-align: center;
+}
+article {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+#myContenIinput,
+#search-container {
+    margin: 5px 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+}
 
 // Estilos personalizados para la tabla
 .table-container {
-    margin: 20px 0;
-    .table {
-        // width: 100%;
-        border-collapse: collapse;
+    // border: 6px solid green;
+    display: flex;
+    justify-content: center;
+    margin: 0px 30px;
+    max-height: calc(100vh - 40vh); // Altura máxima con margen para el scroll
+    overflow-y: auto; // Habilita el scroll vertical
 
+    .table {
         th {
+            position: sticky; // Mantiene el encabezado visible
+            top: 0;
+            z-index: 1; // Asegura que el encabezado esté por encima del contenido
             background-color: rgb(19, 151, 151, 0.6);
-            color: black; // Color del texto en el encabezado
+            color: black;
             font-weight: bold;
             text-align: center;
         }
 
-
-
         tr {
-            &:nth-of-type(odd) {
-                background-color: #f2f2f2; // Color de fila alternante
-            }
 
+            border-collapse: collapse;
+
+            &:nth-of-type(odd) {
+                background-color: #f2f2f2;
+            }
+            background-color:rgba(238, 233, 233, 0.957);
             &:hover {
-                background-color: #e9ecef; // Color de fila al pasar el ratón
+                background-color: #e9ecef;
             }
         }
 
         td {
-            padding: 12px;
+            padding: 10px;
             text-align: left;
-            border: 1px solid #dee2e6; // Borde de las celdas
+            border: 1px solid #dee2e6;
         }
-
     }
+}
+
+#pagination-controls {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    // border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
 }
