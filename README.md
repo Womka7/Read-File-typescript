@@ -41,5 +41,5 @@ MIT
 
 
 
-# CrudBooks-TypeScript
+# File Reader-TypeScript
 In this repository there is a page where you can view your files.csv and search data in this
