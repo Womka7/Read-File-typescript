@@ -1,4 +1,5 @@
-import { AnaliceCSV } from "../models/readModelFile";
+// import { AnaliceCSV } from "../models/readModelFile";
+import { AnaliceCSV } from "../models/read-model-file";
 import { Pagination } from "../views/pagination";
 import { InputSearch } from "../views/searchInput";
 import { CreateTable } from "../views/table";
